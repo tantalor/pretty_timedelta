@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR ORGANIZATION
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pretty_timedelta\n"
+"POT-Creation-Date: 2010-02-14 22:38+PST\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: ENCODING\n"
+"Generated-By: pygettext.py 1.5\n"
+
+
+#: pretty_timedelta.py:18
+msgid "1 day"
+msgstr ""
+
+#: pretty_timedelta.py:20
+msgid "%s days"
+msgstr ""
+
+#: pretty_timedelta.py:23
+msgid "1 hour"
+msgstr ""
+
+#: pretty_timedelta.py:25
+msgid "%s hours"
+msgstr ""
+
+#: pretty_timedelta.py:28
+msgid "1 minute"
+msgstr ""
+
+#: pretty_timedelta.py:30
+msgid "%s minutes"
+msgstr ""
+
+#: pretty_timedelta.py:33
+msgid "1 second"
+msgstr ""
+
+#: pretty_timedelta.py:35
+msgid "%s seconds"
+msgstr ""
+
+#: pretty_timedelta.py:39
+msgid "%s ago"
+msgstr ""
+
+#: pretty_timedelta.py:41
+msgid "just now"
+msgstr ""
+

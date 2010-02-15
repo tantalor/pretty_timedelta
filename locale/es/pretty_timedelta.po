@@ -1,0 +1,56 @@
+# Spanish translations for pretty_timedelta package.
+# Copyright (C) 2010 John Tantalo
+# John Tantalo <john.tantalo@gmail.com>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pretty_timedelta\n"
+"POT-Creation-Date: 2010-02-14 22:31+PST\n"
+"PO-Revision-Date: 2010-02-14 22:32-0800\n"
+"Last-Translator: John Tantalo <john.tantalo@gmail.com>\n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: pygettext.py 1.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: pretty_timedelta.py:18
+msgid "1 day"
+msgstr "1 día"
+
+#: pretty_timedelta.py:20
+msgid "%s days"
+msgstr "%s días"
+
+#: pretty_timedelta.py:23
+msgid "1 hour"
+msgstr "1 hora"
+
+#: pretty_timedelta.py:25
+msgid "%s hours"
+msgstr "%s horas"
+
+#: pretty_timedelta.py:28
+msgid "1 minute"
+msgstr "1 minuto"
+
+#: pretty_timedelta.py:30
+msgid "%s minutes"
+msgstr "%s minutos"
+
+#: pretty_timedelta.py:33
+msgid "1 second"
+msgstr "1 segundo"
+
+#: pretty_timedelta.py:35
+msgid "%s seconds"
+msgstr "%s segundos"
+
+#: pretty_timedelta.py:39s
+msgid "%s ago"
+msgstr "hace %s"
+
+#: pretty_timedelta.py:41
+msgid "just now"
+msgstr "ahorita"
