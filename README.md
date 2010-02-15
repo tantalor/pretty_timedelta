@@ -4,13 +4,13 @@ Pretty Timedelta is a simple python module for formatting [timedelta](http://doc
 
 ## Example
 
-You can use the `pretty_datetime()` function as so.
+You can use the `pretty_timedelta()` function as so.
 
     from datetime import timedelta
-    from pretty_datetime import pretty_datetime
+    from pretty_timedelta import pretty_timedelta
 
     five_minutes = timedelta(0, 0, 0, 0, 5)
-    print pretty_datetime(five_minutes) # "5 minutes ago"
+    print pretty_timedelta(five_minutes) # "5 minutes ago"
 
 Or directly from the command line:
 
