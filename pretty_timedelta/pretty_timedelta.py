@@ -1,15 +1,20 @@
 from datetime import timedelta
+import gettext
 from gettext import translation
 from os import path
 
+
 def translate(*languages):
   localedir = path.join(path.dirname(__file__), 'locale')
-  translation(
+  t = translation(
     fallback=1,
     languages=languages or None,
     domain='pretty_timedelta',
     localedir=localedir,
-  ).install()
+  )
+  # install
+  global _
+  _ = t.ugettext
 
 # install the translation (defaults to English)
 # e.g., export LC_MESSAGES=es

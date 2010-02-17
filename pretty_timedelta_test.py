@@ -58,10 +58,10 @@ class TestSpanish(unittest.TestCase):
     
   def testDays(self):
     """Days in Spanish."""
-    self.assertEquals(ptd(d(1)), "en 1 día")
-    self.assertEquals(ptd(d(2)), "en 2 días")
-    self.assertEquals(ptd(d(-1)), "hace 1 día")
-    self.assertEquals(ptd(d(-2)), "hace 2 días")
+    self.assertEquals(ptd(d(1)), u"en 1 día")
+    self.assertEquals(ptd(d(2)), u"en 2 días")
+    self.assertEquals(ptd(d(-1)), u"hace 1 día")
+    self.assertEquals(ptd(d(-2)), u"hace 2 días")
     
   def testHours(self):
     """Hours in Spanish."""
