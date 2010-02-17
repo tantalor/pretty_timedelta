@@ -1,9 +1,13 @@
 # -*- coding: utf-8 -*-
 
-from datetime import timedelta
+from datetime import timedelta, datetime
 import unittest
 
-from pretty_timedelta import pretty_timedelta as ptd, translate
+import pretty_timedelta
+from pretty_timedelta import\
+  pretty_timedelta as ptd,\
+  pretty_datetime_from_now as pdt,\
+  translate
 
 
 # shortcuts
@@ -49,6 +53,33 @@ class TestEnglish(unittest.TestCase):
   def testJustNow(self):
     """Now in English."""
     self.assertEquals(ptd(d(0)), "just now")
+
+
+class TestDatetimeFromNow(unittest.TestCase):
+  
+  def setUp(self):
+    self.now = datetime.now()
+    class MockDatetime:
+      @staticmethod
+      def now():
+        return self.now
+    pretty_timedelta.datetime = MockDatetime
+  
+  def tearDown(self):
+    pretty_timedelta.datetime = datetime
+
+  def testGeneric(self):
+    """Generic datetime from now."""
+    for n in range(-2, 3): # [-2, 2]
+      for f in (d, h, m, s):
+        td = f(n)
+        dt = self.now + td
+        self.assertEquals(pdt(dt), ptd(td))
+  
+  def testSpecificDatetime(self):
+    """Specific datetime from now."""
+    self.assertEquals(pdt(self.now+timedelta(5)), "in 5 days")
+    self.assertEquals(pdt(self.now-timedelta(5)), "5 days ago")
     
 
 class TestSpanish(unittest.TestCase):
