@@ -1,13 +1,14 @@
 from datetime import timedelta
 from gettext import translation
-
+from os import path
 
 def translate(*languages):
+  localedir = path.join(path.dirname(__file__), 'locale')
   translation(
     fallback=1,
     languages=languages or None,
     domain='pretty_timedelta',
-    localedir='locale/',
+    localedir=localedir,
   ).install()
 
 # install the translation (defaults to English)
