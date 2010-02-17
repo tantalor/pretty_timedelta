@@ -15,40 +15,43 @@ def translate(*languages):
 translate()
 
 
-def pretty_timedelta(td, with_ago=True):
+def pretty_timedelta(td):
+  tp = time_part(td)
+  if tp:
+    if td > timedelta(0):
+      return _("in %s") % tp
+    else:
+      return _("%s ago") % tp
+  else:
+    return _("just now")
+
+
+def time_part(td):
+  td = abs(td)
   days = td.days
   seconds = td.seconds
   hours, seconds = divmod(seconds, 3600)
   minutes, seconds = divmod(seconds, 60)
   if days > 0:
     if days == 1:
-      ret = _("1 day")
+      return _("1 day")
     else:
-      ret = _("%s days") % days
+      return _("%s days") % days
   elif hours > 0:
     if hours == 1:
-      ret = _("1 hour")
+      return _("1 hour")
     else:
-      ret = _("%s hours") % hours
+      return _("%s hours") % hours
   elif minutes > 0:
     if minutes == 1:
-      ret = _("1 minute")
+      return _("1 minute")
     else:
-      ret = _("%s minutes") % minutes
+      return _("%s minutes") % minutes
   elif seconds > 0:
     if seconds == 1:
-      ret = _("1 second")
+      return _("1 second")
     else:
-      ret = _("%s seconds") % seconds
-  else:
-    ret = None
-  if ret:
-    if with_ago:
-      return _("%s ago") % ret
-    else:
-      return ret
-  else:
-    return _("just now")
+      return _("%s seconds") % seconds
 
 
 def main():
