@@ -17,9 +17,9 @@ You can use the `pretty_timedelta()` function as so.
 
 Or directly from the command line:
 
-    $ python pretty_timedelta.py 0 0 0 0 5
+    $ ./main.py 0 0 0 0 5
     in 5 minutes
-    $ python pretty_timedelta.py 0 0 0 0 -5
+    $ ./main.py 0 0 0 0 -5
     5 minutes ago
 
 ## Localization
@@ -29,16 +29,16 @@ Pretty Timedelta can support almost any langauge via the [gettext](http://www.gn
 If you want to try it in Spanish, try setting your `LANGUAGE` environment variable.
 
     $ export LANGUAGE=es
-    $ python pretty_timedelta.py 0 0 0 0 5
+    $ ./main.py 0 0 0 0 5
     en 5 minutos
-    $ python pretty_timedelta.py 0 0 0 0 -5
+    $ ./main.py 0 0 0 0 -5
     hace 5 minutos
 
 ## Tests
 
 Pretty Timedelta comes with a bunch of tests, of course.
 
-    $ python pretty_timedelta_test.py 
+    $ ./pretty_timedelta_test.py 
     ..........
     ----------------------------------------------------------------------
     Ran 10 tests in 0.027s
