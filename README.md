@@ -4,7 +4,7 @@ Pretty Timedelta is a simple python module for formatting [timedelta](http://doc
 
 Pretty Timedelta formats positive timedeltas in terms of the future (e.g, "in 5 minutes") and negative timedeltas in terms of the past (e.g., "5 minutes ago").
 
-## Example
+## Usage
 
 You can use the `pretty_timedelta()` function as so.
 
@@ -13,14 +13,33 @@ You can use the `pretty_timedelta()` function as so.
 
     five_minutes = timedelta(0, 0, 0, 0, 5)
     print pretty_timedelta(five_minutes) # "in 5 minutes"
-    print pretty_timedelta(-five_minutes) # "5 minutes ago"
 
-Or directly from the command line:
+Or by executing the `main.py` program.
 
     $ ./main.py 0 0 0 0 5
     in 5 minutes
     $ ./main.py 0 0 0 0 -5
     5 minutes ago
+
+## Example output
+
+### English
+
+- in 5 minutes
+- 10 hours ago
+- in 3 days
+- 6 months ago
+- in 8 years
+- 7 centuries ago
+
+### Spanish
+
+- en 5 minutos
+- hace 10 horas
+- en 3 días
+- hace 6 meses
+- en 8 años
+- hace 7 siglos
 
 ## Localization
 
@@ -31,17 +50,15 @@ If you want to try it in Spanish, try setting your `LANGUAGE` environment variab
     $ export LANGUAGE=es
     $ ./main.py 0 0 0 0 5
     en 5 minutos
-    $ ./main.py 0 0 0 0 -5
-    hace 5 minutos
 
 ## Tests
 
 Pretty Timedelta comes with a bunch of tests, of course.
 
-    $ ./pretty_timedelta_test.py 
-    ..........
+    $ ./test.py 
+    ..................
     ----------------------------------------------------------------------
-    Ran 10 tests in 0.027s
+    Ran 18 tests in 0.004s
 
     OK
 
