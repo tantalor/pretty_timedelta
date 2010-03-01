@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: pretty_timedelta\n"
-"POT-Creation-Date: 2010-02-16 21:58+PST\n"
+"POT-Creation-Date: 2010-02-28 16:02+PST\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,47 +15,71 @@ msgstr ""
 "Generated-By: pygettext.py 1.5\n"
 
 
-#: pretty_timedelta.py:22
+#: __init__.py:37
 msgid "in %s"
 msgstr ""
 
-#: pretty_timedelta.py:24
+#: __init__.py:39
 msgid "%s ago"
 msgstr ""
 
-#: pretty_timedelta.py:26
+#: __init__.py:41
 msgid "just now"
 msgstr ""
 
-#: pretty_timedelta.py:37
+#: __init__.py:61
+msgid "1 century"
+msgstr ""
+
+#: __init__.py:63
+msgid "%s centuries"
+msgstr ""
+
+#: __init__.py:65
+msgid "1 year"
+msgstr ""
+
+#: __init__.py:67
+msgid "%s years"
+msgstr ""
+
+#: __init__.py:71
+msgid "1 month"
+msgstr ""
+
+#: __init__.py:73
+msgid "%s months"
+msgstr ""
+
+#: __init__.py:76
 msgid "1 day"
 msgstr ""
 
-#: pretty_timedelta.py:39
+#: __init__.py:78
 msgid "%s days"
 msgstr ""
 
-#: pretty_timedelta.py:42
+#: __init__.py:81
 msgid "1 hour"
 msgstr ""
 
-#: pretty_timedelta.py:44
+#: __init__.py:83
 msgid "%s hours"
 msgstr ""
 
-#: pretty_timedelta.py:47
+#: __init__.py:86
 msgid "1 minute"
 msgstr ""
 
-#: pretty_timedelta.py:49
+#: __init__.py:88
 msgid "%s minutes"
 msgstr ""
 
-#: pretty_timedelta.py:52
+#: __init__.py:91
 msgid "1 second"
 msgstr ""
 
-#: pretty_timedelta.py:54
+#: __init__.py:93
 msgid "%s seconds"
 msgstr ""
 

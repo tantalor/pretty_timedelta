@@ -11,7 +11,7 @@ def main():
     print "usage: %s [days [seconds [microseconds [milliseconds [minutes [hours [weeks]]]]]]]" % sys.argv[0]
   else:
     td = timedelta(*[int(s) for s in sys.argv[1:]])
-    print pretty_timedelta(td)
+    print pretty_timedelta(td).encode('utf8')
 
 
 if __name__ == '__main__':

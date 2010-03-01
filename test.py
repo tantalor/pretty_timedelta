@@ -22,6 +22,36 @@ class TestEnglish(unittest.TestCase):
   
   def setUp(self):
     translate('en')
+  
+  def testCenturies(self):
+    """Centuries in English."""
+    self.assertEquals(ptd(d(36524)), "in 99 years")
+    self.assertEquals(ptd(d(36525)), "in 1 century")
+    self.assertEquals(ptd(d(-36525)), "1 century ago")
+    self.assertEquals(ptd(d(73049)), "in 2 centuries")
+    self.assertEquals(ptd(d(-73049)), "2 centuries ago")
+    
+  def testYears(self):
+    """Years in English."""
+    self.assertEquals(ptd(d(365)), "in 11 months")
+    self.assertEquals(ptd(d(366)), "in 1 year")
+    self.assertEquals(ptd(d(-366)), "1 year ago")
+    self.assertEquals(ptd(d(4000)), "in 10 years")
+    self.assertEquals(ptd(d(-4000)), "10 years ago")
+    self.assertEquals(ptd(d(36524)), "in 99 years")
+    self.assertEquals(ptd(d(-36524)), "99 years ago")
+    self.assertEquals(ptd(d(36525)), "in 1 century")
+  
+  def testMonths(self):
+    """Months in English."""
+    self.assertEquals(ptd(d(30)), "in 30 days")
+    self.assertEquals(ptd(d(31)), "in 1 month")
+    self.assertEquals(ptd(d(-31)), "1 month ago")
+    self.assertEquals(ptd(d(300)), "in 9 months")
+    self.assertEquals(ptd(d(-300)), "9 months ago")
+    self.assertEquals(ptd(d(365)), "in 11 months")
+    self.assertEquals(ptd(d(-365)), "11 months ago")
+    self.assertEquals(ptd(d(366)), "in 1 year")
     
   def testDays(self):
     """Days in English."""
@@ -59,6 +89,7 @@ class TestEnglish(unittest.TestCase):
 class TestDatetimeFromNow(unittest.TestCase):
   
   def setUp(self):
+    translate('en')
     self.now = datetime.now()
     class MockDatetime:
       @staticmethod
@@ -87,6 +118,36 @@ class TestSpanish(unittest.TestCase):
   
   def setUp(self):
     translate('es')
+  
+  def testCenturies(self):
+    """Centuries in Spanish."""
+    self.assertEquals(ptd(d(36524)), u"en 99 años")
+    self.assertEquals(ptd(d(36525)), "en 1 siglo")
+    self.assertEquals(ptd(d(-36525)), "hace 1 siglo")
+    self.assertEquals(ptd(d(73049)), "en 2 siglos")
+    self.assertEquals(ptd(d(-73049)), "hace 2 siglos")
+    
+  def testYears(self):
+    """Years en Spanish."""
+    self.assertEquals(ptd(d(365)), "en 11 meses")
+    self.assertEquals(ptd(d(366)), u"en 1 año")
+    self.assertEquals(ptd(d(-366)), u"hace 1 año")
+    self.assertEquals(ptd(d(4000)), u"en 10 años")
+    self.assertEquals(ptd(d(-4000)), u"hace 10 años")
+    self.assertEquals(ptd(d(36524)), u"en 99 años")
+    self.assertEquals(ptd(d(-36524)), u"hace 99 años")
+    self.assertEquals(ptd(d(36525)), "en 1 siglo")
+  
+  def testMonths(self):
+    """Months en Spanish."""
+    self.assertEquals(ptd(d(30)), u"en 30 días")
+    self.assertEquals(ptd(d(31)), "en 1 mes")
+    self.assertEquals(ptd(d(-31)), "hace 1 mes")
+    self.assertEquals(ptd(d(300)), "en 9 meses")
+    self.assertEquals(ptd(d(-300)), "hace 9 meses")
+    self.assertEquals(ptd(d(365)), "en 11 meses")
+    self.assertEquals(ptd(d(-365)), "hace 11 meses")
+    self.assertEquals(ptd(d(366)), u"en 1 año")
     
   def testDays(self):
     """Days in Spanish."""
