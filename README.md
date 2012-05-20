@@ -1,5 +1,7 @@
 # Pretty Timedelta
 
+[![Build Status](https://secure.travis-ci.org/tantalor/pretty_timedelta.png)](http://travis-ci.org/tantalor/pretty_timedelta)
+
 Pretty Timedelta is a simple python module for formatting [timedelta](http://docs.python.org/library/datetime.html#datetime.timedelta) objects as pretty text in any language you want.
 
 Pretty Timedelta formats positive timedeltas in terms of the future (e.g, "in 5 minutes") and negative timedeltas in terms of the past (e.g., "5 minutes ago").
